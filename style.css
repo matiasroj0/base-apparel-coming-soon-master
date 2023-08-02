@@ -1,0 +1,254 @@
+:root {
+    /* primary */
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    /* neutral */
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+/* gradient 1
+
+background: rgb(255,255,255);
+background: linear-gradient(135deg, rgba(255,255,255,1) 37%, rgba(250,250,250,1) 100%);
+
+*/
+
+
+.soft-red {
+    color: var(--soft-red);
+}
+
+/* css reset */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*  */
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.logo-mobile {
+    padding: 1.7rem;
+}
+
+.logo-desktop {
+    display: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-container img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    gap: 1rem;
+}
+
+.text-container h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
+    line-height: 3rem;
+    color: var(--dark-grayish-red);
+}
+
+.h1-span {
+    font-weight: 300;
+}
+
+.text-container p {
+    font-size: .9rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.email-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.email-input {
+    border-radius: 2rem;
+    border: 1px solid rgb(248,191,191);
+    width: 100%;
+    padding: .6rem;
+    padding-left: 1.3rem;
+}
+
+.email-input::placeholder {
+    color: var(--soft-red);
+    font-size: .85rem;
+}
+  
+.email-input:active {
+    box-shadow: none;
+}
+  
+.email-input:focus {
+    outline: none;
+}
+  
+.email-submit-btn {
+    border: 0;
+    padding: .9rem 1.9rem;
+    background: rgb(248,191,191);
+    background: linear-gradient(135deg, rgba(248,191,191,1) 37%, rgba(238,140,140,1) 100%);
+    -webkit-box-shadow: 0px 0px 80px 7px rgba(238,140,140,1);
+    -moz-box-shadow: 0px 0px 80px 7px rgba(238,140,140,1);
+    box-shadow: 0px 0px 80px 7px rgba(238,140,140,1);
+    margin-left: -2rem;
+    border-radius: 2rem;
+}
+
+.email-submit-btn:hover {
+    background: rgb(248,191,191);
+}
+
+.error-icon {
+    position: absolute;
+    left: 65%;
+    width: 5%;
+}
+
+.email-error {
+    color: var(--soft-red);
+    align-self: baseline;
+    font-size: .8rem;
+    padding-left: 1.4rem;
+}
+
+.success {
+    color: rgb(18, 124, 18);
+    align-self: baseline;
+    font-size: .8rem;
+    padding-left: 1.4rem;
+}
+
+.email-input-error {
+    border: 1px solid red;
+}
+
+@media (min-width: 800px) {
+    body {
+        overflow: hidden;
+    }
+
+    section {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .hero-mobile {
+        display: none;
+    }
+
+    .hero-desktop {
+        display: initial;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+    
+    .logo-desktop {
+        justify-self: baseline;
+        align-self: baseline;
+        padding-bottom: 6rem;
+    }
+
+    .img-container {
+        overflow: hidden;
+        flex: 1;
+    }
+
+    .text-container {
+        flex: 1;
+        justify-content: initial;
+        padding-top: 2rem;
+        padding-left: 10rem;
+        padding-right: 6rem;
+    }
+
+    .text-container h1 {
+        text-align: initial;
+        align-self: baseline;
+        font-size: 3.5rem;
+        letter-spacing: .7rem;
+        line-height: 4rem;
+        color: var(--dark-grayish-red);
+        padding-bottom: 1rem;
+    }
+
+    .text-container p {
+        text-align: initial;
+        align-self: baseline;
+        font-size: 1rem;
+        width: 85%;
+        padding-bottom: 1.5rem;
+    }
+
+    .email-div {
+        width: 85%;
+        align-self: baseline;
+    }
+    
+    .error-icon {
+        position: absolute;
+        left: 37%;
+        width: 25px;
+    }
+}
